@@ -96,8 +96,8 @@
 
 <h4>Timetable</h4>
 <ul>
-  <li>Week of 2/26: Ensure conformity in interference power levels</li>
-  <li>Week of 3/05: Generate LTE captures and run proof of concept testing</li>
+  <li><del>Week of 2/26: Ensure conformity in interference power levels</del></li>
+  <li><del>Week of 3/05: Generate LTE captures and run proof of concept testing</del></li>
   <li>Week of 3/12: Continue proof of concept testing</li>
   <li>Week of 3/19: Compile results to present ensuring proof of concept</li>
   <li>Week of 3/26: Install UDOT DSRC equipment within POWDER</li>
@@ -107,6 +107,30 @@
   <li>Week of 4/23: Compile results and determine inpact on DSRC</li>
   <li>Week of 4/30: Format data and form a conclusion as to the impact on DSRC</li>
 </ul>
+<hr>
+
+<h4>Proof of Concept Results</h4>
+<div class="container">
+<div class="row">
+
+  <div class="col-md-6 col-sm-6 vertical-align">
+    <p>
+    <div style="max-width: 130px; text-align: center;">
+      <img src="images/result10M.PNG" style="width: 400%;">
+    </div>
+    </p>
+  </div>
+
+  <div class="col-md-4 col-sm-4">
+    <p>
+    As a proof of concept to ensure we can accurately capture and re-transmit a signal we captured an active 10MHz LTE link on the PhantomNet testbed, which would be analogous to a C-V2X link. Two of the nodes make use of srsLTE software, i.e., srsENB and srsUE, to create a custom LTE network to be recorded by the recorder node. The recorder node makes use of GNU Radio to capture 50M~Hz of the spectrum centered at the downlink frequency (2132.5MHz) of the LTE link. We captured the whole 50MHz surrounding the 10MHz signal to ensure we captured any transmission roll-off.
+    </p>
+    <p>
+    We also placed the LTE link under a sustained load, while the capture was taking place, thus ensuring that the UE does not enter an idle state. To do this we made use of a iperf3 session to transfer data across the link (in a downlink direction) and record the bit-rate achieved. We also monitored the connection using the uhd_fft, which allows us to observe the power-levels at and around the transmission frequency. The figure to the left show the performance impact of interference played back at different frequencies relative to the LTE center frequency.
+    </p>
+  </div>
+
+</div>
 <hr>
 
 <h4>Contact</h4>
