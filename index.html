@@ -33,7 +33,33 @@
 <hr>
 
 <h4>Abstract</h4>
-<p>Since the FCC's controversial decision to adjust the spectrum allocation for intelligent transportation systems in November 2020, the need for targeted research has grown. (There has been a wide range of changes implemented by the FCC and both the removal of 45MHz from existing spectrum allocations and the transition away from DSRC to C-V2X need to be studied in greater detail. In this paper, we aim to explore the effects of these decisions by examining the potential impacts on commercial grade V2X hardware in a real-world, complex radio environment. We will do this by characterizing both DSRC and C-V2X and comparing their performance to each other in several radio environments with different types of interference present. This will allow us to decide as to whether the rule change allows V2X to continues to provide for current and future ITS applications.</p>
+<p>Since the FCC's controversial decision to adjust the spectrum allocation for intelligent transportation systems in November 2020, the need for targeted research has grown. There has been a wide range of changes implemented by the FCC with both the removal of 45MHz from existing spectrum allocations and the transition away from DSRC to C-V2X needing to be studied in greater detail. In this paper, we aim to explore the effects of these decisions by examining the potential impacts on commercial grade V2X hardware in a real-world complex radio environment. We will do this by characterizing both DSRC and C-V2X and comparing their performance to each other in several radio environments with different types of interference present. This will allow us to decide as to whether the rule change allows V2X to continues to provide for current and future ITS applications.
+</p>
+
+<h6>Important Terms</h6>
+<p>
+    <ul>
+      <li>ITS: Intelligent Transportation System</li>
+      <li>V2X: Vehicle to Everything</li>
+      <li>DSRC: Direct Short Range Communication</li>
+      <li>C-V2X: Cellular Vehicle to Everything</li>
+    </ul>
+</p>
+<hr>
+
+<h4>Introduction</h4>
+<p>
+  As cars make advances in sensing and computing systems the need for a dedicated communication standard has arisen due to the unique conditions faced by vehicles. In response to this need, the FCC allocated 75MHz of bandwidth for intelligent transportation systems (ITS). This spectrum from 5.85 to 5.925MHz was to be used by ITS to enhance the operational safety of roadways in the United States. These rules dedicated this spectrum to Direct Short-Range Communication or DSRC a WLAN based V2X solution, they also created seven 10MHz channels for use by the technology within the band. This early reservation was intended to create an environment that would foster research and innovation in the industry-leading to widespread adoption of ITS.
+</p>
+<p>
+  In the twenty years since the reservation, there has been limited investment in V2X. A 2019 report from the Congressional research service stated, that across the United States only 52 DSRC implementations are operational. This lack of adoption prompted the FCC to issue a rule change in 2020 reallocating the lower 45MHz the previously allocated band to unlicensed WiFi transmissions. In order to produce a single 160MHz block of dedicated spectrum for WiFi once combined with existing 5GHz allocations. This rule change also officially transitioned the remaining 30MHz of the band for C-V2X a cellular solution from 3GPP. The motivation for this change has been investments in the industry in supporting the technology. The FCC also stated that it expects C-V2X to provide more robust connectivity for ITS as opposed to DSRC.
+</p>
+<p>
+  In this project, we aim to quantify the impact the rule change will have on the quality of communication achievable with both DSRC and C-V2X in the remaining band with adjacent unregulated transmissions. As well as examining the observable differences between DSRC and C-V2X connections. This will allow us to either support or refute the FCC's assertion that C-V2X presents the more robust solution and the decision to transition away from existing DSRC implementations is correct.
+</p>
+<p>
+  To do this we will first create a system that can reliably and consistently produce unregulated interference in the band, given that no commercially available equipment is currently available for the band in the United States. We will then begin to test several commercial V2X solutions, both DSRC and C-V2X, made available to us through a partnership with the Utah Department of Transportation. Through a series of over-the-air (OTA) tests, we aim to quantify any observable differences between the technology both with and without introduced interference. This data will allow us to verify that the recent changes do not interfere with the band's original purpose of enhancing safety.
+</p>
 <hr>
 
 <h4>Project Goal</h4>
