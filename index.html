@@ -139,6 +139,15 @@
 
 <h4>Prototype</h4>
 
+<h6>Goals/Steps</h6>
+<ul>
+  <li>Perform first proof of concept tests with SDRs and srsLTE</li>
+  <li>Install DSRC equipment and establish communication between the OBU and RSU</li>
+  <li>Generate interference with gnuRadio as well as commercial WiFi 6E equipment</li>
+  <li>Demonstrate the impact of various levels of interference from different interference sources</li>
+  <li>Ensure the methodology is effective at ensuring an apples-to-apples comparison between DSRC/C-V2X</li>
+</ul>
+
 <div class="container">
 <div class="row">
 
@@ -152,24 +161,11 @@
 
   <div class="col-md-4 col-sm-4">
     <p>
-    As a proof of concept to ensure we can accurately capture and re-transmit a signal we captured an active 10MHz LTE link on the PhantomNet testbed, which would be analogous to a C-V2X link. Two of the nodes make use of srsLTE software, i.e., srsENB and srsUE, to create a custom LTE network to be recorded by the recorder node. The recorder node makes use of GNU Radio to capture 50M~Hz of the spectrum centered at the downlink frequency (2132.5MHz) of the LTE link. We captured the whole 50MHz surrounding the 10MHz signal to ensure we captured any transmission roll-off.
-    </p>
-    <p>
-    We also placed the LTE link under a sustained load, while the capture was taking place, thus ensuring that the UE does not enter an idle state. To do this we made use of a iperf3 session to transfer data across the link (in a downlink direction) and record the bit-rate achieved. We also monitored the connection using the uhd_fft, which allows us to observe the power-levels at and around the transmission frequency. The figure to the left show the performance impact of interference played back at different frequencies relative to the LTE center frequency.
+    For our initial OTA testing and measurements of DSRC/C-V2X performance, an OTA test of the equipment in a controlled environment will allow us to establish baseline performance and interference levels. To do this we are proposing setting up the OBU and RSU as part of the POWDER platform at the University of Utah, while using a movable SDR as an interference source as shown in the figure to the left.
     </p>
   </div>
 
 </div>
-
-
-<h6>Goals/Steps</h6>
-<ul>
-  <li>Perform first proof of concept tests with SDRs and srsLTE</li>
-  <li>Install DSRC equipment and establish communication between the OBU and RSU</li>
-  <li>Generate interference with gnuRadio as well as commercial WiFi 6E equipment</li>
-  <li>Demonstrate the impact of various levels of interference from different interference sources</li>
-  <li>Ensure the methodology is effective at ensuring an apples-to-apples comparison between DSRC/C-V2X</li>
-</ul>
 <hr>
 
 <h4>Early Proof of Concept Results</h4>
@@ -179,7 +175,7 @@
   <div class="col-md-6 col-sm-6 vertical-align">
     <p>
     <div style="max-width: 130px; text-align: center;">
-      <img src="figs/result10M.jpeg" style="width: 400%;">
+      <img src="figs/new10M.jpg" style="width: 400%;">
     </div>
     </p>
   </div>
@@ -203,7 +199,7 @@
 </div>
 
 <hr>
-<footer>Last update 03/12/2021</footer>
+<footer>Last update 03/24/2021</footer>
 
 </div>
 
