@@ -43,6 +43,8 @@
       <li>V2X: Vehicle to Everything</li>
       <li>DSRC: Direct Short Range Communication</li>
       <li>C-V2X: Cellular Vehicle to Everything</li>
+      <li>RSU: Road Side Unit</li>
+      <li>OBU: On-Board Unit</li>
     </ul>
 </p>
 <hr>
@@ -136,6 +138,31 @@
 <hr>
 
 <h4>Prototype</h4>
+
+<div class="container">
+<div class="row">
+
+  <div class="col-md-6 col-sm-6 vertical-align">
+    <p>
+    <div style="max-width: 130px; text-align: center;">
+      <img src="figs/topo.jpg" style="width: 400%;">
+    </div>
+    </p>
+  </div>
+
+  <div class="col-md-4 col-sm-4">
+    <p>
+    As a proof of concept to ensure we can accurately capture and re-transmit a signal we captured an active 10MHz LTE link on the PhantomNet testbed, which would be analogous to a C-V2X link. Two of the nodes make use of srsLTE software, i.e., srsENB and srsUE, to create a custom LTE network to be recorded by the recorder node. The recorder node makes use of GNU Radio to capture 50M~Hz of the spectrum centered at the downlink frequency (2132.5MHz) of the LTE link. We captured the whole 50MHz surrounding the 10MHz signal to ensure we captured any transmission roll-off.
+    </p>
+    <p>
+    We also placed the LTE link under a sustained load, while the capture was taking place, thus ensuring that the UE does not enter an idle state. To do this we made use of a iperf3 session to transfer data across the link (in a downlink direction) and record the bit-rate achieved. We also monitored the connection using the uhd_fft, which allows us to observe the power-levels at and around the transmission frequency. The figure to the left show the performance impact of interference played back at different frequencies relative to the LTE center frequency.
+    </p>
+  </div>
+
+</div>
+
+
+<h6>Goals/Steps</h6>
 <ul>
   <li>Perform first proof of concept tests with SDRs and srsLTE</li>
   <li>Install DSRC equipment and establish communication between the OBU and RSU</li>
@@ -152,7 +179,7 @@
   <div class="col-md-6 col-sm-6 vertical-align">
     <p>
     <div style="max-width: 130px; text-align: center;">
-      <img src="result10M.jpeg" style="width: 400%;">
+      <img src="figs/result10M.jpeg" style="width: 400%;">
     </div>
     </p>
   </div>
