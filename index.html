@@ -25,7 +25,7 @@
   <div class="col-md-12 col-sm-12">
     <p><h2>An assessment of the impact of unregulated transmissions on Intelligent Transportation System communications at 5.9GHz</h2>
     Undergraduate Thesis by Jacob Bills<br>
-    University of Utah, Salt Lake City, UT, USA, 84112<br>
+    <a href="https://www.utah.edu/">University of Utah</a>, Salt Lake City, UT, USA, 84112<br>
     </p>
   </div>
 
@@ -62,6 +62,25 @@
 </p>
 <p>
   To do this we will first create a system that can reliably and consistently produce unregulated interference in the band, given that no commercially available equipment is currently available for the band in the United States. We will then begin to test several commercial V2X solutions, both DSRC and C-V2X, made available to us through a partnership with the Utah Department of Transportation. Through a series of over-the-air (OTA) tests, we aim to quantify any observable differences between the technology both with and without introduced interference. This data will allow us to verify that the recent changes do not interfere with the band's original purpose of enhancing safety.
+</p>
+<hr>
+
+<h4>Background</h4>
+<p>
+  V2X describes a family of communication standards two protocols are dominant implementations across the United States: direct short-range communication (DSRC) and cellular-V2X. These implementations control links physical and access layers defining how messages are composed and how and when they are transmitted by the radios. These protocols are important in ensuring operational consistency and interoperability across vendors and networks. This is similar to existing WiFi and LTE standards, which ensure equipment from one company will be compatible with any other piece of compliant equipment. Between these two technologies, the US Department of Transportation has 143 active and pending V2X projects across the country. These implementations service a variety of purposes in a multiple areas. For example, the Utah Department of transportation has a project which used V2X communications to monitor snow plows along the Wasatch front.
+</p>
+
+<h6>DSRC/802.11p</h6>
+<p>
+  The first major platform to exist for V2X in the United States was DSRC it is mentioned in the original FCC rule change that reserves 75MHz for its operation <a href="https://www.fcc.gov/document/fcc-allocates-spectrum-59-ghz-range-intelligent-transportation">[FCC]</a>. The individual standards are defined by 802.11p specifications put out by IEEE. DSRC makes use of orthogonal frequency domain multiplexing (OFDM) for control of the physical layer. This separates the data stream into several narrowband channels improving performance by decreasing the impact of cross-talk and interference. Then DSRC uses carrier access to multiple access (CSMA) for the radio access control system. CSMA causes the transceiver to listen for traffic and wait for an opening before transmitting to avoid over the air collisions.
+</p>
+<p>
+  Since DSRC has existed since the beginning of V2X, its adoption has been limited due to a major flaw limiting its performance. As stated by Naik et al. DSRC fails to remain robust in dense deployments <a href="https://ieeexplore.ieee.org/document/8723326">[Niak]</a>. This is because CSMA cannot adequately cope with the complex multi-path environments present on roadways as well as busy airwaves. Which either results in unrecoverable collisions due to DSRC's lack of receiver acknowledgments or a positive feedback loop that causes the back-off time to grow exponentially preventing any timely transmissions from taking place.
+</p>
+
+<h6>C-V2X</h6>
+<p>
+  C-V2X is a relatively new technology released by 3GPP and is designed to make use of existing cell infrastructure to enhance connectivity, when available. While C-V2X also makes use of OFDM modulation, it takes key features from cellular networks like quadrature phase-shift keying (QPSK) and 16-quadrature amplitude modulation (16-QAM) on wider 15MHz channels to increase operational robustness and performance <a href="https://ieeexplore.ieee.org/document/8723326">[Niak]</a>. Another enabling factor is C-V2X's use of a dual interface system with one traditional LTE interface connecting to LTE infrastructure enabling wider area links and a side-channel interface enabling direct WLAN connections between compatible hardware similar to DSRC. Together with the advanced modulation and multiple interfaces has spurred much faster adoption with some automakers like Toyota transitioning from DSRC to C-V2X in recent years.
 </p>
 <hr>
 
